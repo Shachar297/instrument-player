@@ -1,0 +1,108 @@
+*, *::before, b*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #143f68;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piano {
+  display: none;
+  margin-top: 25vh;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+  border-radius: 0.6vw;
+}
+
+.white {
+  --width: 10vh;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.white.active {
+  background-color: #ccc;
+}
+
+.black {
+  --width: 6vh;
+  background-color: black;
+  margin-right: calc(var(--width) / -2);
+  margin-left: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+}
+
+/* drum kit => */
+
+.drum-kit {
+
+    background-color: rgb(189, 189, 189,0.2);
+  display: none;
+  flex-wrap: wrap;
+  margin-top: 25vh;
+  width: 50vw;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.drumKit{
+    border: solid rgb(255, 255, 255,0.6) 1px;
+    box-shadow: rgb(255, 255, 255,0.6) -2px -1px 1px;
+    border-radius: 5px;
+    background-color: black;
+    margin: 0.5vh;
+
+    width: 10vw;
+    height: 8vh;
+}
+
+.drumKit.active{
+  background-color: #ccc;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0) 2px 2px 2px;
+}
+
+.activated {
+    display: flex;
+}
+
+.chooseInstrument{
+    width: 25vw;
+    margin: 0;
+    flex-basis:1;
+}
+
+.chooseInstrument.noDisplay{
+  display: none;
+}
+
+.chooseInstrument > button {
+    width: 15vw;
+    height: 6vh;
+    background-color: rgb(255,255,255,0.5);
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.chooseInstrument > button:hover{
+    background-color: rgb(255,255,255,0.8);
+    color: #143f68;
+}
+
+.start{
+  width: 10vw;
+  height: 5vh;
+  margin-top: 25vh;
+}

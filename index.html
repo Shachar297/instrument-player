@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title> My First Piano ! </title>
+
+</head>
+<body onload="isStartedPlayingClicked()">
+
+<div class="pageLoadMessage">
+    <h1 id="pageLoadMessage">
+        Hello ! While Playing an instrument you able to play it with your keyboard keys
+    </h1>
+</div>
+
+<div class="homeBtns">
+    <button onclick="onStartPlay(this)" class="start"> Start Playing </button>
+</div>
+
+    <div class="chooseInstrument" id="chooseInstrument">
+        <button id="pianoButton" onclick="handleInstrumentChange(this)"> piano </button>
+          <button id="drumKitButton" onclick="handleInstrumentChange(this)"> drum-kit </button>
+    </div>
+
+    <div class="piano" id="piano">
+        <div data-note="C" class="key white"></div>
+        <div data-note="Cb" class="key black"></div>
+        <div data-note="D" class="key white"></div>
+        <div data-note="Eb" class="key black"></div>
+        <div data-note="E" class="key white"></div>
+        <div data-note="F" class="key white"></div>
+        <div data-note="Gb" class="key black"></div>
+        <div data-note="G" class="key white"></div>
+        <div data-note="Ab" class="key black"></div>
+        <div data-note="A" class="key white"></div>
+        <div data-note="Bb" class="key black"></div>
+        <div data-note="B" class="key white"></div>
+    </div>
+
+    <audio id="C"  src="./notes/notes_C.mp3"></audio>
+    <audio id="Cb" src="./notes/notes_Db.mp3"></audio>
+    <audio id="D"  src="./notes/notes_D.mp3"></audio>
+    <audio id="Eb" src="./notes/notes_Eb.mp3"></audio>
+    <audio id="E"  src="./notes/notes_E.mp3"></audio>
+    <audio id="F"  src="./notes/notes_F.mp3"></audio>
+    <audio id="Gb" src="./notes/notes_Gb.mp3"></audio>
+    <audio id="G"  src="./notes/notes_G.mp3"></audio>
+    <audio id="Ab" src="./notes/notes_Ab.mp3"></audio>
+    <audio id="A"  src="./notes/notes_A.mp3"></audio>
+    <audio id="Bb" src="./notes/notes_Bb.mp3"></audio>
+    <audio id="B"  src="./notes/notes_B.mp3"></audio>
+
+    <br>
+    <div class="drum-kit" id="drum-kit">
+
+        <div data-drum="opened-hat" class="drumKit"></div>
+        <div data-drum="closed-hat" class="drumKit"></div>
+        <div data-drum="kick"       class="drumKit"></div>
+        <div data-drum="snare"      class="drumKit"></div>
+        <br>
+        <div data-drum="high-tom"   class="drumKit"></div>
+        <div data-drum="low-tom"    class="drumKit"></div>
+        <div data-drum="giant-tom"  class="drumKit"></div>
+        <div data-drum="crash"      class="drumKit"></div>
+
+    </div>
+
+    <audio id="opened-hat" src="./drums/opened-hat.wav"></audio>
+    <audio id="closed-hat" src="./drums/closed-hat.wav"></audio>
+    <audio id="kick"       src="./drums/kick.wav"></audio>
+    <audio id="snare"      src="./drums/snare.wav"></audio>
+    <br>
+    <audio id="high-tom"   src="./drums/ambient_tom_1.wav"></audio>
+    <audio id="low-tom"    src="./drums/loetom.wav"></audio>
+    <audio id="giant-tom"  src="./drums/giant_tom.wav"></audio>
+    <audio id="crash"      src="./drums/18_inch_crash.wav"></audio>
+    <script src="script.js"></script>
+
+</body>
+</html>
